@@ -2,7 +2,7 @@
 ** Copyright ® 2015 LeLe570929726. All rights reserved.
 **
 ** Project: HerplasQt-Code
-** Intro: Qt is a powerful and easy framwork. It also can
+** Intro: Qt is a powerful and easy framework. It also can
 **              cross-platform. But it's UI edit part is not very
 **              friendly. So, this project is appear! In IDE part, you can
 **              make UI easily. Of cause, it's visible edit. Then, IDE can
