@@ -1,0 +1,12 @@
+*.obj
+*.sdf
+*.log
+*.pdb
+*.exe
+*.lib
+*.ilk
+*.opensdf
+HerplasQtIDE/HerplasQtIDE/Debug/
+HerplasQtIDE/Win32/
+HerplasQtCode/HerplasQtCode/Debug/
+HerplasQtCode/Win32/
