@@ -43,6 +43,9 @@
     <Filter Include="Code Files\Base\Gui\GGuiObject">
       <UniqueIdentifier>{c8a8db9d-3483-47cc-9f2a-4abda0b7657b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code Files\Base\Gui\GWidget">
+      <UniqueIdentifier>{3ba3f3f3-5fdd-4c40-9133-5bfb7f0bce60}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\qrc_herplasqtcode.cpp">
@@ -66,6 +69,15 @@
     <ClCompile Include="CodeFiles\Base\Gui\GGuiObject\GGuiObject.cpp">
       <Filter>Code Files\Base\Gui\GGuiObject</Filter>
     </ClCompile>
+    <ClCompile Include="CodeFiles\Base\Gui\GWidget\GWidget.cpp">
+      <Filter>Code Files\Base\Gui\GWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ResourcesFiles\herplasqtcode.qrc">
@@ -76,6 +88,9 @@
     </CustomBuild>
     <CustomBuild Include="CodeFiles\Base\Gui\GGuiObject\GGuiObject.h">
       <Filter>Code Files\Base\Gui\GGuiObject</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CodeFiles\Base\Gui\GWidget\GWidget.h">
+      <Filter>Code Files\Base\Gui\GWidget</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

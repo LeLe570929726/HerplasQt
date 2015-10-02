@@ -17,7 +17,7 @@
 ************************************************************/
 /************************************************************
 ** Author: LeLe570929726
-** Time: 2015/09/20 7:38
+** Time: 2015/10/02 07:51
 ************************************************************/
 
 #pragma once
@@ -25,77 +25,41 @@
 /************************************************************
 ** Include part
 ************************************************************/
-#include <QMainWindow>
-#include <QContextMenuEvent>
-#include <QActionEvent>
-#include <QEvent>
-#include <QCloseEvent>
-#include <QDragEnterEvent>
-#include <QDragLeaveEvent>
-#include <QDragMoveEvent>
-#include <QDropEvent>
-#include <QFocusEvent>
-#include <QHideEvent>
-#include <QInputMethodEvent>
-#include <QKeyEvent>
-#include <QMouseEvent>
-#include <QMoveEvent>
-#include <QPaintEvent>
-#include <QResizeEvent>
-#include <QTabletEvent>
-#include <QWheelEvent>
-#include <QChildEvent>
-#include <QTimerEvent>
+#include <QWidget>
 #include "..\GGuiObject\GGuiObject.h"
 
-/************************************************************
-** Class
-**
-** Name: GMainWindow
-** Intro: Window module, has some basic action.
-************************************************************/
-class GMainWindow : public QMainWindow, public GGuiObject {
+class GWidget : public QWidget, public GGuiObject {
 Q_OBJECT								// State this class is a QObject, it can use Qt's Slot/Signal System.
 
 public:
 	/************************************************************
 	** Member Function
 	**
-	** Name: GMainWindow
+	** Name: GWidget
 	** Parameter: none
 	** Returned Value: none
-	** Intro: GMainWindow class's constructor.
+	** Intro: GWidget class's constructor.
 	************************************************************/
-	GMainWindow();
+	GWidget();
 
 	/************************************************************
 	** Member Function
 	**
-	** Name: ~GMainWindow
+	** Name: ~GWidget
 	** Parameter: none
 	** Returned Value: none
-	** Intro: GMainWindow class's destructor.
+	** Intro: GWidget class's destructor.
 	************************************************************/
-	~GMainWindow();
+	~GWidget();
 
 private:
-	/************************************************************
-	** Member Function
-	**
-	** Name: contextMenuEvent
-	** Parameter: eventParameter - Event parameter
-	** Returned Value: none
-	** Intro: QMainWindow's event.
-	************************************************************/
-	void contextMenuEvent(QContextMenuEvent *eventParameter);								// Qt event
-
 	/************************************************************
 	** Member Function
 	**
 	** Name: actionEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void actionEvent(QActionEvent *eventParameter);								// Qt event
 
@@ -105,7 +69,7 @@ private:
 	** Name: changeEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void changeEvent(QEvent *eventParameter);								// Qt event
 
@@ -115,7 +79,7 @@ private:
 	** Name: closeEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void closeEvent(QCloseEvent *eventParameter);								// Qt event
 
@@ -125,7 +89,7 @@ private:
 	** Name: dragEnterEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void dragEnterEvent(QDragEnterEvent *eventParameter);								// Qt event
 
@@ -135,7 +99,7 @@ private:
 	** Name: dragLeaveEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void dragLeaveEvent(QDragLeaveEvent *eventParameter);								// Qt event
 
@@ -145,7 +109,7 @@ private:
 	** Name: dragMoveEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void dragMoveEvent(QDragMoveEvent *eventParameter);								// Qt event
 
@@ -155,7 +119,7 @@ private:
 	** Name: dropEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void dropEvent(QDropEvent *eventParameter);								// Qt event
 
@@ -165,7 +129,7 @@ private:
 	** Name: enterEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void enterEvent(QEvent *eventParameter);								// Qt event
 
@@ -175,7 +139,7 @@ private:
 	** Name: focusInEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void focusInEvent(QFocusEvent *eventParameter);								// Qt event
 
@@ -185,7 +149,7 @@ private:
 	** Name: focusOutEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void focusOutEvent(QFocusEvent *eventParameter);							// Qt event
 
@@ -195,7 +159,7 @@ private:
 	** Name: hideEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void hideEvent(QHideEvent *eventParameter);									// Qt event
 
@@ -205,7 +169,7 @@ private:
 	** Name: inputMethodEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void inputMethodEvent(QInputMethodEvent *eventParameter);								// Qt event
 
@@ -215,7 +179,7 @@ private:
 	** Name: keyPressEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void keyPressEvent(QKeyEvent *eventParameter);								// Qt event
 
@@ -225,7 +189,7 @@ private:
 	** Name: keyReleaseEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void keyReleaseEvent(QKeyEvent *eventParameter);								// Qt event
 
@@ -235,7 +199,7 @@ private:
 	** Name: leaveEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void leaveEvent(QEvent *eventParameter);									// Qt event
 
@@ -245,7 +209,7 @@ private:
 	** Name: mouseDoubleClickEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void mouseDoubleClickEvent(QMouseEvent *eventParameter);									// Qt event
 
@@ -255,7 +219,7 @@ private:
 	** Name: mouseMoveEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void mouseMoveEvent(QMouseEvent *eventParameter);									// Qt event
 
@@ -265,7 +229,7 @@ private:
 	** Name: mousePressEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void mousePressEvent(QMouseEvent *eventParameter);									// Qt event
 
@@ -275,7 +239,7 @@ private:
 	** Name: mouseReleaseEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void mouseReleaseEvent(QMouseEvent *eventParameter);									// Qt event
 
@@ -285,7 +249,7 @@ private:
 	** Name: moveEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void moveEvent(QMoveEvent *eventParameter);									// Qt event
 
@@ -295,7 +259,7 @@ private:
 	** Name: paintEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void paintEvent(QPaintEvent *eventParameter);									// Qt event
 
@@ -305,7 +269,7 @@ private:
 	** Name: resizeEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void resizeEvent(QResizeEvent *eventParameter);									// Qt event
 
@@ -315,7 +279,7 @@ private:
 	** Name: showEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void showEvent(QShowEvent *eventParameter);									// Qt event
 
@@ -325,7 +289,7 @@ private:
 	** Name: tabletEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void tabletEvent(QTabletEvent *eventParameter);									// Qt event
 
@@ -335,37 +299,7 @@ private:
 	** Name: wheelEvent
 	** Parameter: eventParameter - Event parameter
 	** Returned Value: none
-	** Intro: QMainWindow's event.
+	** Intro: QWidget's event.
 	************************************************************/
 	void wheelEvent(QWheelEvent *eventParameter);									// Qt event
-
-	/************************************************************
-	** Member Function
-	**
-	** Name: childEvent
-	** Parameter: eventParameter - Event parameter
-	** Returned Value: none
-	** Intro: QMainWindow's event.
-	************************************************************/
-	void childEvent(QChildEvent *eventParameter);									// Qt event
-
-	/************************************************************
-	** Member Function
-	**
-	** Name: customEvent
-	** Parameter: eventParameter - Event parameter
-	** Returned Value: none
-	** Intro: QMainWindow's event.
-	************************************************************/
-	void customEvent(QEvent *eventParameter);									// Qt event
-
-	/************************************************************
-	** Member Function
-	**
-	** Name: timerEvent
-	** Parameter: eventParameter - Event parameter
-	** Returned Value: none
-	** Intro: QMainWindow's event.
-	************************************************************/
-	void timerEvent(QTimerEvent *eventParameter);									// Qt event
 };

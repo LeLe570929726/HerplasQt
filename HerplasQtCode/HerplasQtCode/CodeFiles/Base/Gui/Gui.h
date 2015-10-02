@@ -20,9 +20,11 @@
 ** Time: 2015/09/20 7:37
 ************************************************************/
 
-#pragma once								// Prevent 'Include Iteration'
+#pragma once
 
 /************************************************************
 ** Include part
 ************************************************************/
-#include "GMainWindow\GMainWindow.h"								// Include GMainWindow class's head file.
+#include "GGuiObject\GGuiObject.h"
+#include "GMainWindow\GMainWindow.h"
+#include "GWidget\GWidget.h"
