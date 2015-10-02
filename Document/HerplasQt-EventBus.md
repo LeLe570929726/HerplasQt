@@ -98,3 +98,40 @@ Event function must use this type. And this function must be a member function.
 ```c++
 void myEventReciver(void *returnValue, void *parameter);
 ```
+
+##### A example
+This is an example to use event bus.
+```c++
+#include <QApplication>
+#include <iostream>
+#include "Base\Base.h"
+
+class MyReciverObject : public EEventObject {
+public:
+	void set() {
+		setReciver(this, &MyReciverObject::eventFunction, "MyEventObject", "MyEvent");
+	}
+	void eventFunction(void *, void *) {
+		removeReciver("MyEventObject", "MyEvent");
+	}
+};
+
+class MyEventObject : public EEventObject {
+public:
+	void post() {
+		postEvent((void *)nullptr, (void *)nullptr, "MyEventObject", "MyEvent");
+	}
+};
+
+int main(int argc, char *argv[]) {
+	QApplication a(argc, argv);
+
+	MyReciverObject myReciverObject;
+	MyEventObject myEventObject;
+	myReciverObject.set();
+	myEventObject.post();
+	myReciverObject.set();
+
+	return a.exec();
+}
+```
