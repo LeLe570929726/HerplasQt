@@ -97,14 +97,14 @@ protected:
 	/************************************************************
 	** Member Function
 	**
-	** Name: deleteReciver
+	** Name: removeReciver
 	** Parameter: objectName - Event object's name
 	**                            eventName - Event's name
 	** Returned Value: bool - Successes return true, failing return
 	**                                                     false
 	** Intro: Delete an event reciver.
 	************************************************************/
-	bool deleteReciver(QString objectName = "", QString eventName = "");
+	bool removeReciver(QString objectName = "", QString eventName = "");
 
 	/************************************************************
 	** Member Function

@@ -77,6 +77,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CodeFiles\Base\Event\EEventObject\EEventObject.cpp" />
+    <ClCompile Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.cpp" />
+    <ClCompile Include="CodeFiles\Base\Factory\FFactory\FFactory.cpp" />
     <ClCompile Include="CodeFiles\Base\Gui\GGuiObject\GGuiObject.cpp" />
     <ClCompile Include="CodeFiles\Base\Gui\GMainWindow\GMainWindow.cpp" />
     <ClCompile Include="CodeFiles\Base\Gui\GWidget\GWidget.cpp" />
@@ -150,6 +152,9 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </Command>
     </CustomBuild>
+    <ClInclude Include="CodeFiles\Base\Factory\Factory.h" />
+    <ClInclude Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.h" />
+    <ClInclude Include="CodeFiles\Base\Factory\FFactory\FFactory.h" />
     <ClInclude Include="CodeFiles\Base\Gui\Gui.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

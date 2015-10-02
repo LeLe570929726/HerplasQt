@@ -61,14 +61,14 @@ QMultiHash<QString, EEventObject::EEventPointer> EEventObject::totalList;
 /************************************************************
 ** Member Function
 **
-** Name: deleteReciver
+** Name: removeReciver
 ** Parameter: objectName - Event object's name
 **                            eventName - Event's name
 ** Returned Value: bool - Successes return true, failing return
 **                                                     false
 ** Intro: Delete an event reciver.
 ************************************************************/
-bool EEventObject::deleteReciver(QString objectName, QString eventName) {
+bool EEventObject::removeReciver(QString objectName, QString eventName) {
 	if (objectName != "" && eventName != "") {
 		EEventObject::objectList.remove(objectName);
 		EEventObject::eventList.remove(eventName);

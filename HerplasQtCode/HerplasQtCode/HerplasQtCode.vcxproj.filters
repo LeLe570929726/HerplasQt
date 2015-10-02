@@ -46,6 +46,15 @@
     <Filter Include="Code Files\Base\Gui\GWidget">
       <UniqueIdentifier>{3ba3f3f3-5fdd-4c40-9133-5bfb7f0bce60}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code Files\Base\Factory">
+      <UniqueIdentifier>{9ed01545-8b48-4e50-95a3-1a8550fb2aba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Base\Factory\FFactory">
+      <UniqueIdentifier>{2dad4bda-6b39-461d-a65f-880efb23644b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Base\Factory\FFactoryObject">
+      <UniqueIdentifier>{bcee6305-bc5a-47a8-8ff0-6000ccea0405}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\qrc_herplasqtcode.cpp">
@@ -78,6 +87,12 @@
     <ClCompile Include="GeneratedFiles\Release\moc_GWidget.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="CodeFiles\Base\Factory\FFactory\FFactory.cpp">
+      <Filter>Code Files\Base\Factory\FFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.cpp">
+      <Filter>Code Files\Base\Factory\FFactoryObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ResourcesFiles\herplasqtcode.qrc">
@@ -105,6 +120,15 @@
     </ClInclude>
     <ClInclude Include="CodeFiles\Base\Event\EEventObject\EEventObject.h">
       <Filter>Code Files\Base\Event\EEventObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Base\Factory\Factory.h">
+      <Filter>Code Files\Base\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Base\Factory\FFactory\FFactory.h">
+      <Filter>Code Files\Base\Factory\FFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.h">
+      <Filter>Code Files\Base\Factory\FFactoryObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
