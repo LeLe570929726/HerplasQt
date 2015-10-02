@@ -24,6 +24,16 @@
 ** Include part
 ************************************************************/
 #include <QApplication>
+#include "Base\Base.h"
+
+class testClass : public GGuiObject {
+	void set() {
+		setReciver(this, &testClass::func, "", "233333");
+	}
+	void func(void *, void *) {
+		removeReciver("", "");
+	}
+};
 
 /************************************************************
 ** Function
