@@ -12,3 +12,6 @@ HerplasQt is coded/developed in in Qt5.4 and Visual Studio 2013. So you need Qt5
 
 ### What should you follow?
 HerplasQt project is open-source. And it follows GNU Lesser General Public License v3. You can modify and distribute freely as long as you follow the license.
+
+### Document
+[Document catalog](https://github.com/LeLe570929726/HerplasQt/blob/master/Document/HerplasQt-Catalog.md)
