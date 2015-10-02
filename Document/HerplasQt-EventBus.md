@@ -112,6 +112,7 @@ public:
 		setReciver(this, &MyReciverObject::eventFunction, "MyEventObject", "MyEvent");
 	}
 	void eventFunction(void *, void *) {
+		system("pause");
 		removeReciver("MyEventObject", "MyEvent");
 	}
 };

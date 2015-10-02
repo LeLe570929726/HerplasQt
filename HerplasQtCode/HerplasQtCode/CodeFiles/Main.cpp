@@ -24,26 +24,6 @@
 ** Include part
 ************************************************************/
 #include <QApplication>
-#include <iostream>
-#include "Base\Base.h"
-
-class MyReciverObject : public EEventObject {
-public:
-	void set() {
-		setReciver(this, &MyReciverObject::eventFunction, "MyEventObject", "MyEvent");
-	}
-	void eventFunction(void *, void *) {
-		system("pause");
-		removeReciver("MyEventObject", "MyEvent");
-	}
-};
-
-class MyEventObject : public EEventObject {
-public:
-	void post() {
-		postEvent((void *)nullptr, (void *)nullptr, "MyEventObject", "MyEvent");
-	}
-};
 
 /************************************************************
 ** Function
@@ -56,12 +36,5 @@ public:
 ************************************************************/
 int main(int argc, char *argv[]) {
 	QApplication a(argc, argv);								// Create app object.
-
-	MyReciverObject myReciverObject;
-	MyEventObject myEventObject;
-	myReciverObject.set();
-	myEventObject.post();
-	myReciverObject.set();
-
 	return a.exec();								// Into message loop.
 }
