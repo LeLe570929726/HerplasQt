@@ -57,8 +57,18 @@ QHash<QString, FFactoryObject *> FFactory::factoryList;
 **																		 pointer.
 ** Intro: Create a widget.
 ************************************************************/
-GGuiObject FFactory::*create(QString type, QString id) {
-
+GGuiObject *FFactory::create(QString type, QString id) {
+	if (FFactory::widgetList.find(id) == FFactory::widgetList.end()) {
+		auto find = FFactory::factoryList.find(type);
+		if (find != FFactory::factoryList.end()) {
+			FFactory::widgetList.insert(id, type);
+			return find.value()->create(id);
+		} else {
+			return (GGuiObject *)nullptr;
+		}
+	} else {
+		return (GGuiObject *)nullptr;
+	}
 }
 
 /************************************************************
@@ -72,8 +82,18 @@ GGuiObject FFactory::*create(QString type, QString id) {
 **																		 pointer.
 ** Intro: Create a widget.
 ************************************************************/
-GGuiObject FFactory::*create(QString type, QString id, QHash<QString, QString> createParameter) {
-
+GGuiObject *FFactory::create(QString type, QString id, QHash<QString, QString> createParameter) {
+	if (FFactory::widgetList.find(id) == FFactory::widgetList.end()) {
+		auto find = FFactory::factoryList.find(type);
+		if (find == FFactory::factoryList.end()) {
+			FFactory::widgetList.insert(id, type);
+			return find.value()->create(id, createParameter);
+		} else {
+			return (GGuiObject *)nullptr;
+		}
+	} else {
+		return (GGuiObject *)nullptr;
+	}
 }
 
 /************************************************************
@@ -86,7 +106,8 @@ GGuiObject FFactory::*create(QString type, QString id, QHash<QString, QString> c
 ** Intro: Create a widget by xml string.
 ************************************************************/
 bool FFactory::create(QString xmlUI) {
-
+	// TODO
+	return false;
 }
 
 /************************************************************
@@ -99,7 +120,8 @@ bool FFactory::create(QString xmlUI) {
 ** Intro: Create a widget by xml string.
 ************************************************************/
 bool FFactory::create(QFile xmlUI) {
-
+	QString xmlText = xmlUI.readAll();
+	return create(xmlText);
 }
 
 /************************************************************
@@ -110,8 +132,18 @@ bool FFactory::create(QFile xmlUI) {
 ** Returned Value: GGuiObject * - Widget's pointer
 ** Intro: Get a widget.
 ************************************************************/
-GGuiObject FFactory::*get(QString id) {
-
+GGuiObject *FFactory::get(QString id) {
+	auto findOne = FFactory::widgetList.find(id);
+	if (findOne != FFactory::widgetList.end()) {
+		auto findTwo = FFactory::factoryList.find(findOne.value());
+		if (findTwo != FFactory::factoryList.end()) {
+			return findTwo.value()->get(id);
+		} else {
+			return (GGuiObject *)nullptr;
+		}
+	} else {
+		return (GGuiObject *)nullptr;
+	}
 }
 
 /************************************************************
@@ -124,7 +156,17 @@ GGuiObject FFactory::*get(QString id) {
 ** Intro: Delete a widget.
 ************************************************************/
 bool FFactory::remove(QString id) {
-
+	auto findOne = FFactory::widgetList.find(id);
+	if (findOne != FFactory::widgetList.end()) {
+		auto findTwo = FFactory::factoryList.find(findOne.value());
+		if (findTwo != FFactory::factoryList.end()) {
+			return findTwo.value()->remove(id);
+		} else {
+			return false;
+		}
+	} else {
+		return false;
+	}
 }
 
 /************************************************************
@@ -138,7 +180,12 @@ bool FFactory::remove(QString id) {
 ** Intro: Register a factory.
 ************************************************************/
 bool FFactory::registerFactory(QString id, FFactoryObject *factoryPointer) {
-
+	if (FFactory::factoryList.find(id) == FFactory::factoryList.end()) {
+		FFactory::factoryList.insert(id, factoryPointer);
+		return true;
+	} else {
+		return false;
+	}
 }
 
 /************************************************************
@@ -151,5 +198,10 @@ bool FFactory::registerFactory(QString id, FFactoryObject *factoryPointer) {
 ** Intro: Delete a factory.
 ************************************************************/
 bool FFactory::removeFactory(QString id) {
-
+	if (FFactory::factoryList.find(id) != FFactory::factoryList.end()) {
+		FFactory::factoryList.remove(id);
+		return true;
+	} else {
+		return false;
+	}
 }

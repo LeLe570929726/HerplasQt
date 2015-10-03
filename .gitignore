@@ -7,6 +7,8 @@
 *.ilk
 *.opensdf
 HerplasQtIDE/HerplasQtIDE/Debug/
+HerplasQtIDE/HerplasQtIDE/Release/
 HerplasQtIDE/Win32/
 HerplasQtCode/HerplasQtCode/Debug/
+HerplasQtCode/HerplasQtCode/Release/
 HerplasQtCode/Win32/

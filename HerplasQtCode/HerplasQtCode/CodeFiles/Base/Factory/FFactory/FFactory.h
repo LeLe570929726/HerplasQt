@@ -30,6 +30,7 @@
 #include <QFile>
 #include "..\FFactoryObject\FFactoryObject.h"
 #include "..\..\Gui\Gui.h"
+#include "..\..\Xml\Xml.h"
 
 /************************************************************
 ** Class

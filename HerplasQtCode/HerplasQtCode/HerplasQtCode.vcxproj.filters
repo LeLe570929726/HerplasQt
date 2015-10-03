@@ -55,6 +55,12 @@
     <Filter Include="Code Files\Base\Factory\FFactoryObject">
       <UniqueIdentifier>{bcee6305-bc5a-47a8-8ff0-6000ccea0405}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code Files\Base\Xml">
+      <UniqueIdentifier>{af8d73b5-322d-47fc-950c-0bcace5453c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Base\Xml\XGuiXml">
+      <UniqueIdentifier>{135e9345-b36d-4d4c-b0af-12f133e11156}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\qrc_herplasqtcode.cpp">
@@ -93,6 +99,9 @@
     <ClCompile Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.cpp">
       <Filter>Code Files\Base\Factory\FFactoryObject</Filter>
     </ClCompile>
+    <ClCompile Include="CodeFiles\Base\Xml\XGuiXml\XGuiXml.cpp">
+      <Filter>Code Files\Base\Xml\XGuiXml</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ResourcesFiles\herplasqtcode.qrc">
@@ -129,6 +138,12 @@
     </ClInclude>
     <ClInclude Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.h">
       <Filter>Code Files\Base\Factory\FFactoryObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Base\Xml\Xml.h">
+      <Filter>Code Files\Base\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Base\Xml\XGuiXml\XGuiXml.h">
+      <Filter>Code Files\Base\Xml\XGuiXml</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xmlUI>
+	<GMainWindow>
+		<id>MyMainWindow</id>
+		<width>450</width>
+		<height>233</height>
+	</GMainWindow>
+	<GWidget>
+		<id>MyWidget</id>
+		<width>233</width>
+		<height>66</height>
+		<parent>MyMainWindow</parent>
+	</GWidget>
+</xmlUI>

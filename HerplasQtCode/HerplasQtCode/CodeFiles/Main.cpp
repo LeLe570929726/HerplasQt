@@ -24,6 +24,9 @@
 ** Include part
 ************************************************************/
 #include <QApplication>
+#include <QFile>
+#include <QDebug>
+#include "Base\Base.h"
 
 /************************************************************
 ** Function
@@ -36,5 +39,19 @@
 ************************************************************/
 int main(int argc, char *argv[]) {
 	QApplication a(argc, argv);								// Create app object.
+
+	QFile xmlFile(":/HerplasQtCode/Xml/TestXml.xml");
+	xmlFile.open(QFile::ReadOnly);
+	auto returnValue  = XGuiXml::processXml(xmlFile.readAll());
+	qDebug() << "===Main Function===";
+	for (auto itOne = returnValue.begin(); itOne != returnValue.end(); ++itOne) {
+		qDebug() << "==========";
+		qDebug() << "\"id\"" << ":" << itOne.key();
+		for (auto itTwo = itOne.value().begin(); itTwo != itOne.value().end(); ++itTwo) {
+			qDebug() << itTwo.key() << ":" << itTwo.value();
+		}
+	}
+	xmlFile.close();
+
 	return a.exec();								// Into message loop.
 }

@@ -17,7 +17,7 @@
 ************************************************************/
 /************************************************************
 ** Author: LeLe570929726
-** Time: 2015/09/20 7:36
+** Time: 2015/10/03 08:48
 ************************************************************/
 
 #pragma once
@@ -25,7 +25,47 @@
 /************************************************************
 ** Include part
 ************************************************************/
-#include "Gui\Gui.h"
-#include "Event\Event.h"
-#include "Factory\Factory.h"
-#include "Xml\Xml.h"
+#include <QString>
+#include <QHash>
+#include <QDomDocument>
+#include <QDomElement>
+#include <QDomNode>
+#include <QDomNodeList>
+
+class XGuiXml {
+public:
+	/************************************************************
+	** Member Function
+	**
+	** Name: XGuiXml
+	** Parameter: none
+	** Returned Value: none
+	** Intro: XGuiXml class's constructor.
+	************************************************************/
+	XGuiXml() = default;
+
+	/************************************************************
+	** Member Function
+	**
+	** Name: ~XGuiXml
+	** Parameter: none
+	** Returned Value: none
+	** Intro: XGuiXml class's destructor.
+	************************************************************/
+	~XGuiXml() = default;
+
+public:
+	/************************************************************
+	** Member Function
+	**
+	** Name: processXml
+	** Parameter: xmlText - Xml text
+	** Returned Value: QHash<QString, > - Widget's id
+	**										QHash<QString, > - Widget's attribute
+	**																					 name
+	**										QHash<, QString> - Widget's attribute
+	**																					 value
+	** Intro: Process xml.
+	************************************************************/
+	static QHash<QString, QHash<QString, QString>> processXml(QString xmlText);
+};
