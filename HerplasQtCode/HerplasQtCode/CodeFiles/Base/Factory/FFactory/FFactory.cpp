@@ -106,8 +106,26 @@ GGuiObject *FFactory::create(QString type, QString id, QHash<QString, QString> c
 ** Intro: Create a widget by xml string.
 ************************************************************/
 bool FFactory::create(QString xmlUI) {
-	// TODO
-	return false;
+	auto widgetMap = XGuiXml::processXml(xmlUI);
+	if (widgetMap.begin() != widgetMap.end()) {
+		for (auto it = widgetMap.begin(); it != widgetMap.end(); ++it) {
+			if (FFactory::widgetList.find(it.key()) == FFactory::widgetList.end()) {
+				auto typeName = it.value().find("type").value();
+				auto factoryIt = FFactory::factoryList.find(typeName);
+				if (factoryIt != FFactory::factoryList.end()) {
+					FFactory::widgetList.insert(it.key(), typeName);
+					factoryIt.value()->create(it.key(), it.value());
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		}
+	} else {
+		return false;
+	}
+	return true;
 }
 
 /************************************************************

@@ -42,15 +42,7 @@ int main(int argc, char *argv[]) {
 
 	QFile xmlFile(":/HerplasQtCode/Xml/TestXml.xml");
 	xmlFile.open(QFile::ReadOnly);
-	auto returnValue  = XGuiXml::processXml(xmlFile.readAll());
-	qDebug() << "===Main Function===";
-	for (auto itOne = returnValue.begin(); itOne != returnValue.end(); ++itOne) {
-		qDebug() << "==========";
-		qDebug() << "\"id\"" << ":" << itOne.key();
-		for (auto itTwo = itOne.value().begin(); itTwo != itOne.value().end(); ++itTwo) {
-			qDebug() << itTwo.key() << ":" << itTwo.value();
-		}
-	}
+	FFactory::create(xmlFile.readAll());
 	xmlFile.close();
 
 	return a.exec();								// Into message loop.
