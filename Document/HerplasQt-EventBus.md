@@ -1,20 +1,20 @@
 # HerplasQt Document
 
 ### EventBus
-HerplasQt provides an event system. All EEventObject class or EEventObject's child class can use this event system.
+HerplasQt provides an event system. All OObjectEvent class or OObjectEvent's child class can use this event system.
 
-##### Create an EEventObject
-You must create an EEventObject to posts and recives event.
+##### Create an OObjectEvent
+You must create an OObjectEvent to posts and recives event.
 ```c++
-#include "Base\Base.h"
+#include "Core\Core.h"
 
-class MyEventObject : public EEventObject {
+class MyEventObject : public OObjectEvent {
 	
 }
 ```
 or
 ```c++
-#include "Base\Base.h"
+#include "Core\Core.h"
 
 struct MyEventObject : public EEventObject {
 	
@@ -104,9 +104,9 @@ This is an example to use event bus.
 ```c++
 #include <QApplication>
 #include <iostream>
-#include "Base\Base.h"
+#include "Core\Core.h"
 
-class MyReciverObject : public EEventObject {
+class MyReciverObject : public OObjectEvent {
 public:
 	void set() {
 		setReciver(this, &MyReciverObject::eventFunction, "MyEventObject", "MyEvent");
@@ -117,7 +117,7 @@ public:
 	}
 };
 
-class MyEventObject : public EEventObject {
+class MyEventObject : public OObjectEvent {
 public:
 	void post() {
 		postEvent((void *)nullptr, (void *)nullptr, "MyEventObject", "MyEvent");
