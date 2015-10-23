@@ -23,6 +23,6 @@
 #pragma once
 
 /************************************************************
-** Include part
+** Includes
 ************************************************************/
-#include "EEventObject\EEventObject.h"
+#include "EventObject\EventObject.h"

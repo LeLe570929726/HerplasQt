@@ -17,14 +17,14 @@
 ************************************************************/
 /************************************************************
 ** Author: LeLe570929726
-** Time: 2015/09/20 7:37
+** Time: 2015/10/23 20:37
 ************************************************************/
 
 #pragma once
 
 /************************************************************
-** Include part
+** Includes
 ************************************************************/
-#include "GGuiObject\GGuiObject.h"
-#include "GMainWindow\GMainWindow.h"
-#include "GWidget\GWidget.h"
+#include "Event\Event.h"
+#include "Object\Object.h"
+#include "Xml\Xml.h"

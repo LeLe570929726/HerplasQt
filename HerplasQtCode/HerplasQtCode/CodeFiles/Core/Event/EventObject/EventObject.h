@@ -23,7 +23,7 @@
 #pragma once
 
 /************************************************************
-** Include part
+** Includes
 ************************************************************/
 #include <QString>
 #include <QMultiHash>
@@ -32,7 +32,7 @@
 ** Class
 **
 ** Name: EEventObject
-** Intro: Provide a basic object.
+** Intro: Provide a basic object with event bus.
 ************************************************************/
 class EEventObject {
 public:
@@ -110,7 +110,7 @@ protected:
 	** Member Function
 	**
 	** Name: postEvent
-	** Parameter: returnValue - Return value's pointer 
+	** Parameter: returnValue - Return value's pointer
 	**							parameter - Calling function's parameter
 	**							objectName - Event object name
 	**							eventName - Event name

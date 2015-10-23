@@ -17,13 +17,42 @@
 ************************************************************/
 /************************************************************
 ** Author: LeLe570929726
-** Time: 2015/10/02 08:49
+** Time: 2015/10/23 22:39
 ************************************************************/
 
 #pragma once
 
 /************************************************************
-** Include part
+** Includes
 ************************************************************/
-#include "FFactory\FFactory.h"
-#include "FFactoryObject\FFactoryObject.h"
+#include "..\Object\Object.h"
+#include "..\..\Event\Event.h"
+
+/************************************************************
+** Class
+**
+** Name: OObjectEvent
+** Intro: Provide a basic object with event.
+************************************************************/
+class OObjectEvent : public EEventObject, public OObject {
+public:
+	/************************************************************
+	** Member Function
+	**
+	** Name: OObjectEvent
+	** Parameter: none
+	** Returned Value: none
+	** Intro: OObjectEvent class's constructor.
+	************************************************************/
+	OObjectEvent();
+
+	/************************************************************
+	** Member Function
+	**
+	** Name: ~OObjectEvent
+	** Parameter: none
+	** Returned Value: none
+	** Intro: OObjectEvent class's destructor.
+	************************************************************/
+	~OObjectEvent() = default;
+};

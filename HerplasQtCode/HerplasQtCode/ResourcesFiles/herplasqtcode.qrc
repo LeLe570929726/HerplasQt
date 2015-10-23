@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/HerplasQtCode">
-        <file>Xml/TestXml.xml</file>
-    </qresource>
-</RCC>

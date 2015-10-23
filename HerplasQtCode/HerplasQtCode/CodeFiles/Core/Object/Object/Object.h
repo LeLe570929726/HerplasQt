@@ -17,86 +17,78 @@
 ************************************************************/
 /************************************************************
 ** Author: LeLe570929726
-** Time: 2015/10/02 11:17
+** Time: 2015/10/23 22:16
 ************************************************************/
 
 #pragma once
 
 /************************************************************
-** Include part
+** Includes
 ************************************************************/
-#include <QHash>
 #include <QString>
-#include "..\..\Gui\Gui.h"
+#include <typeinfo>
 
 /************************************************************
 ** Class
 **
-** Name: FFactoryObject
-** Intro: Provide a basic factory.
+** Name: OObject
+** Intro: Provide a basic object.
 ************************************************************/
-class FFactoryObject {
+class OObject {
 public:
 	/************************************************************
 	** Member Function
 	**
-	** Name: FFactoryObject
+	** Name: OObject
 	** Parameter: none
 	** Returned Value: none
-	** Intro: FFactoryObject class's constructor.
+	** Intro: OObject class's constructor.
 	************************************************************/
-	FFactoryObject() = default;
+	OObject();
 
 	/************************************************************
 	** Member Function
 	**
-	** Name: ~FFactoryObject
+	** Name: ~OObject
 	** Parameter: none
 	** Returned Value: none
-	** Intro: FFactoryObject class's destructor.
+	** Intro: OObject class's destructor.
 	************************************************************/
-	~FFactoryObject() = default;
+	~OObject() = default;
 
 public:
 	/************************************************************
 	** Member Function
 	**
-	** Name: create
-	** Parameter: id - Widget's id
-	** Returned Value: GGuiObject * - Widget's pointer
-	** Intro: Create a widget.
+	** Name: setTypeName
+	** Parameter: typeName - Object's type name
+	** Returned Value: none
+	** Intro: Set object's type name
 	************************************************************/
-	virtual GGuiObject *create(QString id);
+	inline void setTypeName(QString typeName) {
+		this->typeName = typeName;
+	}
 
 	/************************************************************
 	** Member Function
 	**
-	** Name: create
-	** Parameter: id - Widget's id
-	**							createParameter - Create parameter
-	** Returned Value: GGuiObject * - Widget's pointer
-	** Intro: Create a widget.
+	** Name: setTypeName
+	** Parameter: none
+	** Returned Value: QString - Object's type name
+	** Intro: Get object's type name
 	************************************************************/
-	virtual GGuiObject *create(QString id, QHash<QString, QString> createParameter);
+	inline QString getTypeName() {
+		return this->typeName;
+	}
 
+private:
 	/************************************************************
-	** Member Function
+	** Member Object
 	**
-	** Name: get
-	** Parameter: id - Widget's id
-	** Returned Value: GGuiObject * - Widget's pointer
-	** Intro: Get a widget.
+	** Name: typeName
+	** Parameter: typeName - Object's type name
+	** Returned Value: none
+	** Intro: Save object's type name
 	************************************************************/
-	virtual GGuiObject *get(QString id);
-
-	/************************************************************
-	** Member Function
-	**
-	** Name: remove
-	** Parameter: id - Widget's id
-	** Returned Value: bool - Successed return true, failed return
-	**													  false
-	** Intro: Delete a widget.
-	************************************************************/
-	virtual bool remove(QString id);
+	QString typeName;
 };

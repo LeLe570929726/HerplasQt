@@ -23,8 +23,9 @@
 #pragma once
 
 /************************************************************
-** Include part
+** Includes
 ************************************************************/
+#include "..\..\Object\Object.h"
 #include <QString>
 #include <QHash>
 #include <QDomDocument>
@@ -32,7 +33,7 @@
 #include <QDomNode>
 #include <QDomNodeList>
 
-class XGuiXml {
+class XGuiXml : public OObject {
 public:
 	/************************************************************
 	** Member Function
