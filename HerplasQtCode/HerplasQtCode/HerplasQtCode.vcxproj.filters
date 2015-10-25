@@ -49,6 +49,15 @@
     <Filter Include="Code Files\Core\Xml\GuiXml">
       <UniqueIdentifier>{a95163a4-c5c1-4ada-a0b0-0fdde9782285}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code Files\Core\Gui">
+      <UniqueIdentifier>{de9f9d6b-72b8-4b29-95b6-21940e472404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Core\Gui\MainWindow">
+      <UniqueIdentifier>{ede74733-f2c6-4b5b-b8c8-4384203c049d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Core\Gui\Widget">
+      <UniqueIdentifier>{3d69c757-477e-412b-a251-df232cea1c30}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\qrc_herplasqtcode.cpp">
@@ -69,10 +78,34 @@
     <ClCompile Include="CodeFiles\Core\Xml\GuiXml\GuiXml.cpp">
       <Filter>Code Files\Core\Xml\GuiXml</Filter>
     </ClCompile>
+    <ClCompile Include="CodeFiles\Core\Gui\MainWindow\MainWindow.cpp">
+      <Filter>Code Files\Core\Gui\MainWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeFiles\Core\Gui\Widget\Widget.cpp">
+      <Filter>Code Files\Core\Gui\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Widget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Widget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="herplasqtcode.qrc">
       <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CodeFiles\Core\Gui\MainWindow\MainWindow.h">
+      <Filter>Code Files\Core\Gui\MainWindow</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CodeFiles\Core\Gui\Widget\Widget.h">
+      <Filter>Code Files\Core\Gui\Widget</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +132,9 @@
     </ClInclude>
     <ClInclude Include="CodeFiles\Core\Xml\GuiXml\GuiXml.h">
       <Filter>Code Files\Core\Xml\GuiXml</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Core\Gui\Gui.h">
+      <Filter>Code Files\Core\Gui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

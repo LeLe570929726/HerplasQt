@@ -16,7 +16,7 @@ or
 ```c++
 #include "Core\Core.h"
 
-struct MyEventObject : public EEventObject {
+struct MyEventObject : public OObjectEvent {
 	
 }
 ```
