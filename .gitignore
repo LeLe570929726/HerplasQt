@@ -6,9 +6,11 @@
 *.lib
 *.ilk
 *.opensdf
+*.stackdump
 HerplasQtIDE/HerplasQtIDE/Debug/
 HerplasQtIDE/HerplasQtIDE/Release/
 HerplasQtIDE/Win32/
 HerplasQtCode/HerplasQtCode/Debug/
 HerplasQtCode/HerplasQtCode/Release/
 HerplasQtCode/Win32/
+Packup/
