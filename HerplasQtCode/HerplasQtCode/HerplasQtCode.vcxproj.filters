@@ -25,45 +25,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;cxx;c;def</Extensions>
     </Filter>
-    <Filter Include="Code Files\Base">
-      <UniqueIdentifier>{d179aa66-dbad-4f16-91ed-7d75a665eac4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Gui">
-      <UniqueIdentifier>{775effde-2d21-4ac1-8c6d-9e9917c8fa2e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Gui\GMainWindow">
-      <UniqueIdentifier>{427cdf0c-c94b-4125-84d7-98dad8da9ced}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Event">
-      <UniqueIdentifier>{e206a299-7edc-43bf-b80d-c9fbe0260bb0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Event\EEventObject">
-      <UniqueIdentifier>{79c6e803-b208-4dc4-a680-91a737820c7d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Gui\GGuiObject">
-      <UniqueIdentifier>{c8a8db9d-3483-47cc-9f2a-4abda0b7657b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Gui\GWidget">
-      <UniqueIdentifier>{3ba3f3f3-5fdd-4c40-9133-5bfb7f0bce60}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Factory">
-      <UniqueIdentifier>{9ed01545-8b48-4e50-95a3-1a8550fb2aba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Factory\FFactory">
-      <UniqueIdentifier>{2dad4bda-6b39-461d-a65f-880efb23644b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Factory\FFactoryObject">
-      <UniqueIdentifier>{bcee6305-bc5a-47a8-8ff0-6000ccea0405}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Xml">
-      <UniqueIdentifier>{af8d73b5-322d-47fc-950c-0bcace5453c4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Xml\XGuiXml">
-      <UniqueIdentifier>{135e9345-b36d-4d4c-b0af-12f133e11156}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code Files\Base\Factory\FMainWindowFactory">
-      <UniqueIdentifier>{4c1bdb72-c7c6-4ba1-b386-7361a9e054d2}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\qrc_herplasqtcode.cpp">
@@ -72,87 +33,10 @@
     <ClCompile Include="CodeFiles\Main.cpp">
       <Filter>Code Files</Filter>
     </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Gui\GMainWindow\GMainWindow.cpp">
-      <Filter>Code Files\Base\Gui\GMainWindow</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_GMainWindow.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_GMainWindow.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Event\EEventObject\EEventObject.cpp">
-      <Filter>Code Files\Base\Event\EEventObject</Filter>
-    </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Gui\GGuiObject\GGuiObject.cpp">
-      <Filter>Code Files\Base\Gui\GGuiObject</Filter>
-    </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Gui\GWidget\GWidget.cpp">
-      <Filter>Code Files\Base\Gui\GWidget</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_GWidget.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_GWidget.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Factory\FFactory\FFactory.cpp">
-      <Filter>Code Files\Base\Factory\FFactory</Filter>
-    </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.cpp">
-      <Filter>Code Files\Base\Factory\FFactoryObject</Filter>
-    </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Xml\XGuiXml\XGuiXml.cpp">
-      <Filter>Code Files\Base\Xml\XGuiXml</Filter>
-    </ClCompile>
-    <ClCompile Include="CodeFiles\Base\Factory\FMainWindowFactory\FMainWindowFactory.cpp">
-      <Filter>Code Files\Base\Factory\FMainWindowFactory</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ResourcesFiles\herplasqtcode.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="CodeFiles\Base\Gui\GMainWindow\GMainWindow.h">
-      <Filter>Code Files\Base\Gui\GMainWindow</Filter>
-    </CustomBuild>
-    <CustomBuild Include="CodeFiles\Base\Gui\GGuiObject\GGuiObject.h">
-      <Filter>Code Files\Base\Gui\GGuiObject</Filter>
-    </CustomBuild>
-    <CustomBuild Include="CodeFiles\Base\Gui\GWidget\GWidget.h">
-      <Filter>Code Files\Base\Gui\GWidget</Filter>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CodeFiles\Base\Base.h">
-      <Filter>Code Files\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Gui\Gui.h">
-      <Filter>Code Files\Base\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Event\Event.h">
-      <Filter>Code Files\Base\Event</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Event\EEventObject\EEventObject.h">
-      <Filter>Code Files\Base\Event\EEventObject</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Factory\Factory.h">
-      <Filter>Code Files\Base\Factory</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Factory\FFactory\FFactory.h">
-      <Filter>Code Files\Base\Factory\FFactory</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Factory\FFactoryObject\FFactoryObject.h">
-      <Filter>Code Files\Base\Factory\FFactoryObject</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Xml\Xml.h">
-      <Filter>Code Files\Base\Xml</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Xml\XGuiXml\XGuiXml.h">
-      <Filter>Code Files\Base\Xml\XGuiXml</Filter>
-    </ClInclude>
-    <ClInclude Include="CodeFiles\Base\Factory\FMainWindowFactory\FMainWindowFactory.h">
-      <Filter>Code Files\Base\Factory\FMainWindowFactory</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
