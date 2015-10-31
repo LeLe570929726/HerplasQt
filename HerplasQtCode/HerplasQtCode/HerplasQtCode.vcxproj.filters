@@ -25,6 +25,24 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;cxx;c;def</Extensions>
     </Filter>
+    <Filter Include="Code Files\Core">
+      <UniqueIdentifier>{47676a13-6887-4c3b-bc63-02d8be7588f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Core\Object">
+      <UniqueIdentifier>{7f78e6c1-f5f9-499c-97ed-70502f67bd35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Core\Object\Object">
+      <UniqueIdentifier>{4652b98b-f68d-45e0-adf9-ea56166cda43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Core\Object\EventObject">
+      <UniqueIdentifier>{5fd54d49-78d5-4662-9915-75374db77c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Core\Event">
+      <UniqueIdentifier>{295cb300-2ac4-4259-ba0e-1953f44e7807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Core\Event\EventObject">
+      <UniqueIdentifier>{68fbf33f-e695-4b72-abe6-2048203cd0db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\qrc_herplasqtcode.cpp">
@@ -33,10 +51,39 @@
     <ClCompile Include="CodeFiles\Main.cpp">
       <Filter>Code Files</Filter>
     </ClCompile>
+    <ClCompile Include="CodeFiles\Core\Object\Object\Object.cpp">
+      <Filter>Code Files\Core\Object\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeFiles\Core\Object\EventObject\EventObject.cpp">
+      <Filter>Code Files\Core\Object\EventObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeFiles\Core\Event\EventObject\EventObject.cpp">
+      <Filter>Code Files\Core\Event\EventObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ResourcesFiles\herplasqtcode.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CodeFiles\Core\Core.h">
+      <Filter>Code Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Core\Object\Object.h">
+      <Filter>Code Files\Core\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Core\Object\Object\Object.h">
+      <Filter>Code Files\Core\Object\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Core\Object\EventObject\EventObject.h">
+      <Filter>Code Files\Core\Object\EventObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Core\Event\Event.h">
+      <Filter>Code Files\Core\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFiles\Core\Event\EventObject\EventObject.h">
+      <Filter>Code Files\Core\Event\EventObject</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

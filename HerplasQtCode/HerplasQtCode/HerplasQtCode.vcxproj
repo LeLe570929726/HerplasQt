@@ -76,6 +76,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CodeFiles\Core\Event\EventObject\EventObject.cpp" />
+    <ClCompile Include="CodeFiles\Core\Object\EventObject\EventObject.cpp" />
+    <ClCompile Include="CodeFiles\Core\Object\Object\Object.cpp" />
     <ClCompile Include="CodeFiles\Main.cpp" />
     <ClCompile Include="GeneratedFiles\qrc_herplasqtcode.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -95,6 +98,14 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CodeFiles\Core\Core.h" />
+    <ClInclude Include="CodeFiles\Core\Event\Event.h" />
+    <ClInclude Include="CodeFiles\Core\Event\EventObject\EventObject.h" />
+    <ClInclude Include="CodeFiles\Core\Object\EventObject\EventObject.h" />
+    <ClInclude Include="CodeFiles\Core\Object\Object.h" />
+    <ClInclude Include="CodeFiles\Core\Object\Object\Object.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
